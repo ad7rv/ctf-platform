@@ -245,8 +245,8 @@ function typeWriter() {
   if (!el) return;
   const lines = [
     "> booting ctf-platform ...",
-    "> loading 7 challenges ...",
-    "> categories: web · crypto · forensics · reversing · misc",
+    "> loading 27 challenges ...",
+    "> categories: web · crypto · forensics · stego · reversing · osint · misc · programming",
     "> good luck, hacker. █",
   ];
   let li = 0, ci = 0, out = "";

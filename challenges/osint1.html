@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>The Internet Never Forgets · CTF</title>
+  <link rel="stylesheet" href="../css/style.css" />
+</head>
+<body>
+  <div class="challenge-wrap">
+    <a class="back" href="../index.html">← back to challenges</a>
+    <h1>⏪ The Internet Never Forgets</h1>
+    <p>
+      The developer of this CTF platform made a classic mistake: they accidentally
+      committed a file with an admin backup code to the <strong>public source repo</strong>...
+      then deleted it in a panic with a commit titled "remove leaked file".
+    </p>
+    <p>
+      Deleting a file doesn't erase history. <code class="inline">git</code> remembers everything.
+    </p>
+    <ul>
+      <li>The source code of this site lives at <code class="inline">github.com/ad7rv/ctf-platform</code></li>
+      <li>Browse the repository's <strong>commit history</strong> — look for that panicked commit.</li>
+      <li>"Files changed" in the earlier commit contains the leaked file and its contents.</li>
+      <li>git users: <code class="inline">git log --oneline</code> then <code class="inline">git show</code>.</li>
+    </ul>
+  </div>
+</body>
+</html>

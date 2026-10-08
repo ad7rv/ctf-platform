@@ -124,6 +124,9 @@ header {
 .cat-forensics { color: #e5c07b; border-color: #e5c07b; }
 .cat-reversing { color: #ef596f; border-color: #ef596f; }
 .cat-misc { color: #56b6c2; border-color: #56b6c2; }
+.cat-osint { color: #ff9e64; border-color: #ff9e64; }
+.cat-stego { color: #bb9af7; border-color: #bb9af7; }
+.cat-programming { color: #7dcfff; border-color: #7dcfff; }
 .diff { font-size: 0.72rem; color: var(--muted); }
 .diff-easy { color: #98c379; }
 .diff-medium { color: var(--warn); }

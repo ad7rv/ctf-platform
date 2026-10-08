@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Hex Me · CTF</title>
+  <link rel="stylesheet" href="../css/style.css" />
+</head>
+<body>
+  <div class="challenge-wrap">
+    <a class="back" href="../index.html">← back to challenges</a>
+    <h1>🔢 Hex Me</h1>
+    <p>Intercepted from a memory dump. Looks like hexadecimal — every two characters is one byte:</p>
+    <blockquote>4354467b68337834643363316d346c5f66756e7d</blockquote>
+    <ul>
+      <li>Linux: <code class="inline">echo '4354...' | xxd -r -p</code></li>
+      <li>Python: <code class="inline">bytes.fromhex('4354...').decode()</code></li>
+      <li>Or CyberChef "From Hex".</li>
+    </ul>
+  </div>
+</body>
+</html>

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Admin Login · CTF</title>
+  <link rel="stylesheet" href="../css/style.css" />
+</head>
+<body>
+  <div class="challenge-wrap">
+    <a class="back" href="../index.html">← back to challenges</a>
+    <h1>🔐 Admin Login</h1>
+    <p>
+      This admin panel was built by a developer who copies SQL tutorials a little too
+      literally. The login check below shows you the <em>exact query</em> it builds.
+      Can you log in without knowing any password?
+    </p>
+
+    <blockquote>
+      <strong>Backend query (for "debugging"):</strong><br />
+      <code class="inline">SELECT * FROM admins WHERE user='<span id="q-user">???</span>' AND pass='<span id="q-pass">???</span>'</code>
+    </blockquote>
+
+    <p>
+      <input id="u" class="input" placeholder="username" autocomplete="off" />
+      <input id="p" class="input" placeholder="password" type="password" autocomplete="off" />
+      <button class="btn btn-primary" onclick="login()">Log in</button>
+    </p>
+    <div class="flag-msg" id="out"></div>
+
+    <ul>
+      <li>How could the text YOU type break out of the <code class="inline">'...'</code> quotes in that query?</li>
+      <li>What condition is always true? (Hint: does <code class="inline">1=1</code> ring a bell?)</li>
+      <li>SQL comments start with <code class="inline">--</code> and ignore the rest of the line.</li>
+    </ul>
+  </div>
+
+  <script>
+    function login() {
+      var u = document.getElementById("u").value;
+      var p = document.getElementById("p").value;
+      var out = document.getElementById("out");
+      document.getElementById("q-user").textContent = u;
+      document.getElementById("q-pass").textContent = p;
+
+      // 🚨 deliberately "vulnerable" check for learning purposes
+      var query = "SELECT * FROM admins WHERE user='" + u + "' AND pass='" + p + "'";
+      var injected = /'\s*or\s*1\s*=\s*1/i.test(u) || /'\s*or\s*1\s*=\s*1/i.test(p);
+      var commented = /--/.test(u + p);
+
+      if (injected && commented) {
+        out.textContent = "🎉 " + query + " → 1 row returned. Welcome, admin! Flag: CTF{0r_1_eq_1_byp4ss}";
+        out.className = "flag-msg ok";
+      } else if (injected) {
+        out.textContent = "⚠️ SQL error near '' AND pass='... your quote broke the query. Comment out the rest!";
+        out.className = "flag-msg bad";
+      } else {
+        out.textContent = "❌ " + query + " → 0 rows. Invalid credentials.";
+        out.className = "flag-msg bad";
+      }
+    }
+  </script>
+</body>
+</html>

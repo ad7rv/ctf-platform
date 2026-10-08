@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Last Words · CTF</title>
+  <link rel="stylesheet" href="../css/style.css" />
+</head>
+<body>
+  <div class="challenge-wrap">
+    <a class="back" href="../index.html">← back to challenges</a>
+    <h1>🪦 Last Words</h1>
+    <p>
+      An insider smuggled a message out disguised as a boring auto-generated
+      "diary export". The text means nothing. But the <strong>end of every line</strong>
+      carries one character of the secret, top to bottom.
+    </p>
+    <div class="download-box">
+      <span style="font-size:2rem">📄</span>
+      <div>
+        <strong>message.txt</strong> (23 lines of filler — only the poem matters)
+        <br /><a href="../assets/message.txt" download>⬇ Download the message</a>
+      </div>
+    </div>
+    <ul>
+      <li>Skip the header lines; start after the <code class="inline">====</code> divider.</li>
+      <li><code class="inline">tail -n +3 message.txt | cut -c ...</code>— or just read the last letter of each line.</li>
+      <li>Python: <code class="inline">''.join(l[-1] for l in lines)</code></li>
+    </ul>
+  </div>
+</body>
+</html>

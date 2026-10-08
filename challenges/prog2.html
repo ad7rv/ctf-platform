@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Count the Needles · CTF</title>
+  <link rel="stylesheet" href="../css/style.css" />
+</head>
+<body>
+  <div class="challenge-wrap">
+    <a class="back" href="../index.html">← back to challenges</a>
+    <h1>🧮 Count the Needles</h1>
+    <p>
+      A haystack of 4,000 random strings. Somewhere inside, whole needles.
+      Count them precisely — no cheating with your eyes.
+    </p>
+    <div class="download-box">
+      <span style="font-size:2rem">🌾</span>
+      <div>
+        <strong>haystack.txt</strong> (4,000 lines)
+        <br /><a href="../assets/haystack.txt" download>⬇ Download the haystack</a>
+      </div>
+    </div>
+    <blockquote>
+      <strong>Task:</strong> How many lines contain the word <code class="inline">needle</code>?<br />
+      The flag is <code class="inline">CTF{that_count}</code>.
+    </blockquote>
+    <ul>
+      <li>Linux: one pipeline command is enough — <code class="inline">grep</code> + <code class="inline">wc</code>.</li>
+      <li>Python: <code class="inline">sum('needle' in line for line in open('haystack.txt'))</code></li>
+    </ul>
+  </div>
+</body>
+</html>

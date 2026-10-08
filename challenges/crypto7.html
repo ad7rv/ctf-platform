@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>The Lemon Cipher · CTF</title>
+  <link rel="stylesheet" href="../css/style.css" />
+</head>
+<body>
+  <div class="challenge-wrap">
+    <a class="back" href="../index.html">← back to challenges</a>
+    <h1>🍋 The Lemon Cipher</h1>
+    <p>
+      Found on a suspect's notepad. They used a Vigenère cipher — like Caesar, but
+      each letter shifts by a different amount based on a repeating <strong>keyword</strong>.
+    </p>
+    <p>Ciphertext:</p>
+    <blockquote>NXR{j1t3y3v3_o1du3c}</blockquote>
+    <p>Scribbled in the margin: <em>"key = my favorite sour fruit, 5 letters"</em></p>
+    <ul>
+      <li>The keyword letters shift: A=0, B=1, ... L=11, E=4, M=12, O=14, N=13.</li>
+      <li>CyberChef: "Vigenère Decode" with the fruit as key.</li>
+      <li>Only letters were ciphered; digits/underscores passed through. Keep the original case when submitting (the decoded case IS the flag's case).</li>
+    </ul>
+  </div>
+</body>
+</html>

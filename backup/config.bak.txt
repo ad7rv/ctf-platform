@@ -1,0 +1,6 @@
+# ==== production config backup (do not commit) ====
+db_host=10.0.0.14
+db_user=webapp
+db_pass=hunter2
+admin_panel=/admin
+deploy_flag=CTF{h1dd3n_d1r3ct0ry_l00ting}

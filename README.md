@@ -2,21 +2,23 @@
 
 A lightweight, **fully static** Capture The Flag platform you can host for **free** on GitHub Pages. Perfect for running a friendly hacking competition with your friends.
 
-![challenges](https://img.shields.io/badge/challenges-7-00ff9c) ![total points](https://img.shields.io/badge/total%20points-1100-ffcc00) ![hosting](https://img.shields.io/badge/hosting-GitHub%20Pages%20(free)-blue)
+![challenges](https://img.shields.io/badge/challenges-27-00ff9c) ![total points](https://img.shields.io/badge/total%20points-4350-ffcc00) ![hosting](https://img.shields.io/badge/hosting-GitHub%20Pages%20(free)-blue)
 
 ## 🎯 Challengers start here
 
 Visit the live site, enter a hacker name, solve challenges, and submit flags in the format `CTF{...}`. Categories:
 
-| Category | Challenge | Points |
+| Category | Challenges | Points |
 |---|---|---|
-| 🌐 Web | Source Code Secrets | 100 |
-| 🔐 Crypto | Caesar's Favorite Salad | 100 |
-| 🔐 Crypto | Base(ic) Instinct | 150 |
-| 🌐 Web | Cookie Monster | 150 |
-| 🗂️ Misc | Ask the Robots | 150 |
-| 🕵️ Forensics | Hidden in Plain Sight | 200 |
-| 🔓 Reversing | Reverse the XOR | 250 |
+| 🌐 Web | Source Code Secrets (100) · Read-Only (100) · Cookie Monster (150) · Header Hunter (150) · Directory Digger (150) · Admin Login (200) | 850 |
+| 🔐 Crypto | Caesar's Salad (100) · Hex Me (100) · Binary Talk (100) · Dit Dah (100) · Base(ic) Instinct (150) · Lucky Seven (150) · Lemon Cipher (200) | 900 |
+| 🕵️ Forensics | Hidden in Plain Sight (200) · Wrong Label (150) · Logstack (150) · Metadata Matters (200) | 700 |
+| 👻 Stego | Last Words (200) · Invisible Ink (250) | 450 |
+| 🔓 Reversing | The Beacon (150) · Crack the Check (200) · Reverse the XOR (250) | 600 |
+| 🗂️ Misc | Ask the Robots (150) | 150 |
+| 🌍 OSINT | The Internet Never Forgets (200) · Branch Out (200) — *these use this repo's real git history & branches!* | 400 |
+| 🧮 Programming | Sum of Primes (150) · Count the Needles (150) | 300 |
+| | **Total** | **4350** |
 
 ## 🚀 Deploy to GitHub Pages (5 minutes)
 

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Crack the Check · CTF</title>
+  <link rel="stylesheet" href="../css/style.css" />
+</head>
+<body>
+  <div class="challenge-wrap">
+    <a class="back" href="../index.html">← back to challenges</a>
+    <h1>🧩 Crack the Check</h1>
+    <p>
+      This license-key validator checks the input <em>character by character</em>.
+      It never stores the full flag in one place... but the source is right below.
+      Assemble the pieces.
+    </p>
+
+    <blockquote><pre>function validate(key) {
+  const parts = [
+    "CTF{",
+    String.fromCharCode(99, 104, 52, 114),          // 4 chars
+    "_by_",
+    "c" + "h" + String.fromCharCode(52) + "r",      // 4 chars
+    "_c" + "h" + "3" + "ck",
+    "}"
+  ];
+  return key === parts.join("");
+}</pre></blockquote>
+
+    <ul>
+      <li><code class="inline">String.fromCharCode(99, 104, 52, 114)</code> — what string is that?</li>
+      <li>Paste the array pieces into your console and <code class="inline">.join("")</code>.</li>
+      <li>Or decode character codes by hand with an ASCII table.</li>
+    </ul>
+  </div>
+</body>
+</html>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Metadata Matters · CTF</title>
+  <link rel="stylesheet" href="../css/style.css" />
+</head>
+<body>
+  <div class="challenge-wrap">
+    <a class="back" href="../index.html">← back to challenges</a>
+    <h1>📷 Metadata Matters</h1>
+    <p>
+      This photo was seized in an investigation. The picture itself is a boring
+      1×1 pixel — but image files carry <strong>metadata</strong>: camera model,
+      timestamps, and free-form text fields developers sometimes abuse.
+    </p>
+    <div class="download-box">
+      <span style="font-size:2rem">📷</span>
+      <div>
+        <strong>evidence_photo.png</strong> (evidence file)
+        <br /><a href="../assets/evidence_photo.png" download>⬇ Download the evidence</a>
+      </div>
+    </div>
+    <ul>
+      <li><code class="inline">strings evidence_photo.png</code> — anything readable hiding in the chunks?</li>
+      <li>PNG files store text in <code class="inline">tEXt</code> chunks.</li>
+      <li><code class="inline">exiftool</code> or <code class="inline">pngcheck -t</code> show metadata nicely.</li>
+    </ul>
+  </div>
+</body>
+</html>

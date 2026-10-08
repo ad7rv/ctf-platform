@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Wrong Label · CTF</title>
+  <link rel="stylesheet" href="../css/style.css" />
+</head>
+<body>
+  <div class="challenge-wrap">
+    <a class="back" href="../index.html">← back to challenges</a>
+    <h1>🏷️ Wrong Label</h1>
+    <p>
+      The suspect renamed a file to <code class="inline">evidence.dat</code> hoping
+      nobody would bother opening a meaningless ".dat" file. Extensions lie —
+      <strong>magic bytes don't</strong>.
+    </p>
+    <div class="download-box">
+      <span style="font-size:2rem">🗃️</span>
+      <div>
+        <strong>evidence.dat</strong> (unknown binary blob)
+        <br /><a href="../assets/evidence.dat" download>⬇ Download the blob</a>
+      </div>
+    </div>
+    <ul>
+      <li><code class="inline">file evidence.dat</code> — what is it <em>really</em>?</li>
+      <li><code class="inline">xxd evidence.dat | head</code> — do the first bytes spell something familiar?</li>
+      <li>If it's compressed, give it the right extension and decompress it.</li>
+    </ul>
+  </div>
+</body>
+</html>

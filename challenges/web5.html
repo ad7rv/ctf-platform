@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Directory Digger · CTF</title>
+  <link rel="stylesheet" href="../css/style.css" />
+</head>
+<body>
+  <div class="challenge-wrap">
+    <a class="back" href="../index.html">← back to challenges</a>
+    <h1>⛏️ Directory Digger</h1>
+    <p>
+      Somewhere on <em>this very website</em>, an admin uploaded a backup of the
+      server configuration and forgot about it. There's no link to it anywhere —
+      you have to <strong>guess the path</strong>.
+    </p>
+    <ul>
+      <li>Backup folders love boring names: <code class="inline">/backup/</code>, <code class="inline">/bak/</code>, <code class="inline">/old/</code>...</li>
+      <li>Backup <em>files</em> love extensions like <code class="inline">.bak</code>, <code class="inline">.old</code>, <code class="inline">.bak.txt</code></li>
+      <li>Combine a folder and a file name in the URL bar. Try <code class="inline">/backup/config.bak.txt</code> 👀</li>
+      <li>Real hunters use tools like <code class="inline">gobuster</code> or <code class="inline">feroxbuster</code> with a wordlist.</li>
+    </ul>
+  </div>
+</body>
+</html>

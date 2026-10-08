@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Binary Talk · CTF</title>
+  <link rel="stylesheet" href="../css/style.css" />
+</head>
+<body>
+  <div class="challenge-wrap">
+    <a class="back" href="../index.html">← back to challenges</a>
+    <h1>🤖 Binary Talk</h1>
+    <p>The robot only speaks in 0s and 1s. Each group of 8 bits is one ASCII character:</p>
+    <blockquote>01000011 01010100 01000110 01111011 01100010 00110001 01101110 00110100 01110010 01111001 01011111 00110001 01110011 01011111 01100010 00110100 01110011 00110011 01011111 00110010 01111101</blockquote>
+    <ul>
+      <li>Python: <code class="inline">''.join(chr(int(b,2)) for b in data.split())</code></li>
+      <li>Or any online "binary to text" converter.</li>
+    </ul>
+  </div>
+</body>
+</html>

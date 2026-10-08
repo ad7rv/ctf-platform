@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>The Beacon · CTF</title>
+  <link rel="stylesheet" href="../css/style.css" />
+</head>
+<body>
+  <div class="challenge-wrap">
+    <a class="back" href="../index.html">← back to challenges</a>
+    <h1>🔦 The Beacon</h1>
+    <p>
+      A malware sample "phones home" by building its callback string from raw
+      character codes so it doesn't appear in plain text anywhere. Here's the
+      decompiled snippet — recover what it sends:
+    </p>
+
+    <blockquote><pre>const codes = [
+  67, 84, 70, 123,
+  102, 114, 48, 109, 95,
+  99, 104, 52, 114, 99, 48, 100, 51, 115,
+  95, 119, 49, 116, 104, 95, 108, 48, 118, 51,
+  125
+];
+const beacon = String.fromCharCode(...codes);
+send(beacon);</pre></blockquote>
+
+    <ul>
+      <li>Each number is an ASCII code: 65 = 'A', 97 = 'a', ...</li>
+      <li>Python one-liner: <code class="inline">''.join(map(chr, [67, 84, ...]))</code></li>
+      <li>Or run the snippet itself in DevTools (but print, don't send!).</li>
+    </ul>
+  </div>
+</body>
+</html>

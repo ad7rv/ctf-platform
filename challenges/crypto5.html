@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Lucky Seven · CTF</title>
+  <link rel="stylesheet" href="../css/style.css" />
+</head>
+<body>
+  <div class="challenge-wrap">
+    <a class="back" href="../index.html">← back to challenges</a>
+    <h1>🎰 Lucky Seven</h1>
+    <p>
+      Another Caesar cipher — but this time the shift is <strong>unknown</strong>.
+      <s>Actually, rumor says the sender was superstitious and always used his
+      lucky number.</s> Brute force works too: there are only 25 possible shifts.
+    </p>
+    <blockquote>JAM{zo1ma_z3c3u_bw}</blockquote>
+    <ul>
+      <li>Only letters were shifted; digits and <code class="inline">{_}</code> stayed put.</li>
+      <li>Try every shift in CyberChef ("ROT13" with a custom amount) until it reads like a flag.</li>
+      <li>The "lucky" shift might be related to... slot machines. 🎰</li>
+    </ul>
+  </div>
+</body>
+</html>

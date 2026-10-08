@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Needle in the Logstack · CTF</title>
+  <link rel="stylesheet" href="../css/style.css" />
+</head>
+<body>
+  <div class="challenge-wrap">
+    <a class="back" href="../index.html">← back to challenges</a>
+    <h1>🪵 Needle in the Logstack</h1>
+    <p>
+      We dumped 3,000+ lines of production server logs. An admin wrote the
+      <em>real</em> flag in one line. There are also <strong>60 fake flags</strong>
+      from rejected attempts. Reading every line would take all night...
+    </p>
+    <div class="download-box">
+      <span style="font-size:2rem">📜</span>
+      <div>
+        <strong>server.log</strong> (3,061 lines of noise)
+        <br /><a href="../assets/server.log" download>⬇ Download the log</a>
+      </div>
+    </div>
+    <ul>
+      <li><code class="inline">grep 'CTF{' server.log</code> — too many results? What makes the real line different?</li>
+      <li>Rejected attempts were logged by a <em>debug</em> logger. The real one was written as an <strong>admin note</strong>.</li>
+      <li><code class="inline">grep -i 'prod flag' server.log</code> might be... productive.</li>
+    </ul>
+  </div>
+</body>
+</html>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>The Invisible Ink · CTF</title>
+  <link rel="stylesheet" href="../css/style.css" />
+</head>
+<body>
+  <div class="challenge-wrap">
+    <a class="back" href="../index.html">← back to challenges</a>
+    <h1>👻 The Invisible Ink</h1>
+    <p>
+      This note looks short and innocent. Select all the text, though... the
+      highlight doesn't quite line up. Something invisible lives between the
+      letters: <strong>zero-width characters</strong>.
+    </p>
+    <div class="download-box">
+      <span style="font-size:2rem">📝</span>
+      <div>
+        <strong>note.txt</strong> (spoiler: it contains a note... sort of)
+        <br /><a href="../assets/note.txt" download>⬇ Download the note</a>
+      </div>
+    </div>
+    <ul>
+      <li><code class="inline">python3 -c "print(repr(open('note.txt').read()))"</code> — make the invisible visible.</li>
+      <li>Characters like U+200B (zero-width space) render as absolutely nothing.</li>
+      <li>Filter them out to read the real text.</li>
+    </ul>
+  </div>
+</body>
+</html>

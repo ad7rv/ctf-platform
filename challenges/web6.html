@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Read-Only · CTF</title>
+  <link rel="stylesheet" href="../css/style.css" />
+</head>
+<body>
+  <div class="challenge-wrap">
+    <a class="back" href="../index.html">← back to challenges</a>
+    <h1>🔒 Read-Only</h1>
+    <p>
+      HR said this employee-badge form is "locked". The flag is <em>right there</em>,
+      but the field refuses to cooperate. Forms are just HTML — and HTML is just a
+      suggestion your browser chooses to follow.
+    </p>
+    <p>
+      <label>Employee badge ID:</label><br />
+      <input class="input" value="CTF{d3v_t00ls_3n4bl3_m3}" disabled style="width: 320px; opacity: 0.6;" />
+    </p>
+    <ul>
+      <li>Why is the field greyed out? Which HTML attribute causes that?</li>
+      <li>F12 → Elements → find the input → <strong>delete the attribute</strong>.</li>
+      <li>Or run one line in the console: <code class="inline">document.querySelector('input').removeAttribute('disabled')</code></li>
+    </ul>
+  </div>
+</body>
+</html>
