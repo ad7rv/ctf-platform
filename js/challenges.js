@@ -80,8 +80,8 @@ const CHALLENGES = [
     id: "crypto6", title: "Dit Dah", category: "Crypto", points: 100, difficulty: "Easy",
     description: "An old-school radio transmission: dots and dashes. Decode the Morse.",
     link: "challenges/crypto6.html",
-    hint: "Any Morse translator. The braces and underscores are not encoded.",
-    hash: "38820c37ab08cb47b7dae2a530fdeec7f4fca9362b880d7b04cacd6f9545f84a", // CTF{d1t_d4h_d1t}
+    hint: "Any Morse translator. The braces and underscores are not encoded. Morse is caseless → decoded text is ALL CAPS.",
+    hash: "a4e196558be97cc6f8e3e3bea7f36cb36b10e54dde8b65b9dd499100229cc8b3", // CTF{D1T_D4H_D1T}
   },
   {
     id: "crypto2", title: "Base(ic) Instinct", category: "Crypto", points: 150, difficulty: "Easy",
