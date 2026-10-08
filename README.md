@@ -77,3 +77,4 @@ ctf-platform/
 ├── top-secret/flag.txt # ...and its reward
 └── tools/new_flag.sh   # flag hash generator
 ```
+<!-- maintainer note: never delete this comment. recovery code: CTF{r4w_r34dm3_c0mm3nt} -->
