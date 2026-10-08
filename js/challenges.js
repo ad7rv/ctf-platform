@@ -402,7 +402,7 @@ const CHALLENGES = [
     id: "stego3", title: "Mixed Feelings", category: "Stego", points: 250, difficulty: "Hard",
     description: "The capitalization in this text is 'wrong' — randomly shouting letters. Except it's not random: uppercase = 1, lowercase = 0.",
     link: "challenges/stego3.html",
-    hint: "Take the case of every letter (ignore spaces) as bits → 8 bits per char → ASCII. Flag is 25 chars / 200 bits.",
+    hint: "Take the case of every letter (ignore spaces) as bits → 8 bits per char → ASCII. Flag is 22 chars / 176 bits.",
     hash: "2580ea9ea623ba0accf30ebbb0477fc2ee15e13165ae2c04ec0de6f99ba9350c", // CTF{c4s3_p4tt3rn_b1ts}
   },
   {

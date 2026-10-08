@@ -2,79 +2,58 @@
 
 A lightweight, **fully static** Capture The Flag platform you can host for **free** on GitHub Pages. Perfect for running a friendly hacking competition with your friends.
 
-![challenges](https://img.shields.io/badge/challenges-27-00ff9c) ![total points](https://img.shields.io/badge/total%20points-4350-ffcc00) ![hosting](https://img.shields.io/badge/hosting-GitHub%20Pages%20(free)-blue)
+![challenges](https://img.shields.io/badge/challenges-77-00ff9c) ![total points](https://img.shields.io/badge/total%20points-12850-ffcc00) ![hosting](https://img.shields.io/badge/hosting-GitHub%20Pages%20(free)-blue)
 
 ## 🎯 Challengers start here
 
-Visit the live site, enter a hacker name, solve challenges, and submit flags in the format `CTF{...}`. Categories:
+Visit the live site, enter a hacker name, solve challenges, and submit flags in the format `CTF{...}`.
 
-| Category | Challenges | Points |
+| Category | Count | Highlights |
 |---|---|---|
-| 🌐 Web | Source Code Secrets (100) · Read-Only (100) · Cookie Monster (150) · Header Hunter (150) · Directory Digger (150) · Admin Login (200) | 850 |
-| 🔐 Crypto | Caesar's Salad (100) · Hex Me (100) · Binary Talk (100) · Dit Dah (100) · Base(ic) Instinct (150) · Lucky Seven (150) · Lemon Cipher (200) | 900 |
-| 🕵️ Forensics | Hidden in Plain Sight (200) · Wrong Label (150) · Logstack (150) · Metadata Matters (200) | 700 |
-| 👻 Stego | Last Words (200) · Invisible Ink (250) | 450 |
-| 🔓 Reversing | The Beacon (150) · Crack the Check (200) · Reverse the XOR (250) | 600 |
-| 🗂️ Misc | Ask the Robots (150) | 150 |
-| 🌍 OSINT | The Internet Never Forgets (200) · Branch Out (200) — *these use this repo's real git history & branches!* | 400 |
-| 🧮 Programming | Sum of Primes (150) · Count the Needles (150) | 300 |
-| | **Total** | **4350** |
+| 🌐 Web | 14 | view-source, cookies, meta tags, SQLi sim, localStorage, sitemap, dir guess, split comments, entities, CSS/JS files, unlisted page, 3-part flag |
+| 🔐 Crypto | 17 | ROT13, Caesar, hex, binary, Morse, base64×2, base32, base58, octal, decimal ASCII, URL-encoding, ROT47, single-byte XOR, rail fence, Vigenère, Atbash |
+| 🕵️ Forensics | 12 | PNG trailer, tEXt chunk, gzip mislabel, log grep, b64 file, hex pcap, zip, tar-in-tar, docx=zip, PDF text, memory dump, JSON logs |
+| 👻 Stego | 8 | acrostic, zero-width, case-bits, every-4th-word, CSS colors, reversed file, every-3rd-char, 0px spans |
+| 🔓 Reversing | 9 | XOR, charcodes, char-by-char check, atob, double-atob, ±1 offsets, minus-13, array flip, index cipher |
+| 🌍 OSINT | 6 | **real git forensics on this repo:** deleted commit, hidden branch, commit message, annotated tag, RAW README, flag-as-filename |
+| 🗂️ Misc | 1 | robots.txt treasure map |
+| 🧮 Programming | 10 | primes sum, factorial digits, fib(40), md5, vowel/even counts, longest word, hex XOR, caesar shift discovery |
 
 ## 🚀 Deploy to GitHub Pages (5 minutes)
 
 ```bash
-# 1. Create a NEW repo on github.com (e.g. "ctf-platform") — do NOT initialize it
-
-# 2. In this folder:
-git init
-git add .
-git commit -m "🚩 initial CTF platform"
+git init && git add . && git commit -m "ctf"
 git branch -M main
 git remote add origin https://github.com/YOUR-USERNAME/ctf-platform.git
 git push -u origin main
 ```
 
-3. On GitHub: repo **Settings → Pages → Build and deployment**
-4. Source: **Deploy from a branch** → Branch: **main** → Folder: **/(root)** → Save
-5. Wait ~1 minute, then share: `https://YOUR-USERNAME.github.io/ctf-platform/`
-
-> ⚠️ **Important for the "Ask the Robots" challenge:** GitHub Pages serves `robots.txt` from the repo root automatically — no extra setup needed. The `/top-secret/flag.txt` path also just works.
+Then: repo **Settings → Pages → Deploy from a branch → main / (root)** → share `https://YOUR-USERNAME.github.io/ctf-platform/`.
 
 ## ✏️ Customizing
 
-Everything lives in **`js/challenges.js`** — title, description, points, hints, and the flag hash for each challenge.
-
-**To change a flag:**
+- All challenge metadata lives in **`js/challenges.js`** (`CHALLENGES` array).
+- Change a flag:
 
 ```bash
-bash tools/new_flag.sh "CTF{your_new_flag}"
-# → copy the printed hash into the challenge's "hash" field in js/challenges.js
-git add . && git commit -m "new flag" && git push
+bash tools/new_flag.sh "CTF{new_flag_here}"
+# paste the printed hash into the challenge entry, commit, push — live in ~1 min
 ```
 
-**To add a challenge:** create a page in `challenges/`, generate a hash with `tools/new_flag.sh`, and add an entry to the `CHALLENGES` array in `js/challenges.js`.
-
-**To rename the site:** edit the `<span id="siteTitle">` in `index.html` and the hero heading.
+- Add a challenge: create `challenges/mychallenge.html`, generate a hash, append an entry in `js/challenges.js`.
 
 ## ⚠️ Honest limitations (static hosting)
 
-- **No server-side code.** Flags are verified in the browser by comparing SHA-256 hashes — plaintext flags never appear in `js/challenges.js`... but challenge *files themselves* (HTML comments, the PNG, the JS) necessarily contain the flags. Determined source-diggers can find them. For friends: fine, it's part of the fun and a learning moment. 😄
-- **Scoreboard is per-browser** (localStorage) — each player's progress lives on their own device; there's no shared global leaderboard.
-- Need accounts, a global live scoreboard, and server-side flag checking? Use **[CTFd](https://ctfd.io/)** — free and open source, but requires a real server (won't run on GitHub Pages).
+- No server-side code: flags are verified by SHA-256 in the browser. Challenge *files themselves* must contain flags, so determined source-diggers can find them — house rule it. 😄
+- Leaderboard is per-browser (localStorage). For a shared global scoreboard use CTFd on a real server.
+- The OSINT challenges intentionally use this repo's real git history/branches/tags — deleting them breaks those flags.
 
-## 📁 Project structure
+## 📁 Structure
 
 ```
-ctf-platform/
-├── index.html          # main scoreboard + challenge hub
-├── css/style.css       # dark hacker theme
-├── js/
-│   ├── challenges.js   # ⭐ edit this: challenges + flag hashes
-│   └── app.js          # flag checking, scoring, leaderboard
-├── challenges/         # one page per challenge
-├── assets/top_secret.png  # forensics evidence file
-├── robots.txt          # part of the "Ask the Robots" challenge
-├── top-secret/flag.txt # ...and its reward
-└── tools/new_flag.sh   # flag hash generator
+index.html · css/ · js/{app.js,challenges.js}
+challenges/          # 77 challenge pages
+assets/              # downloads: logs, binaries, archives, stego files
+robots.txt · sitemap.xml · top-secret/ · backup/   # challenge treasure paths
+tools/new_flag.sh    # SHA-256 flag-hash generator
 ```
-<!-- maintainer note: never delete this comment. recovery code: CTF{r4w_r34dm3_c0mm3nt} -->
