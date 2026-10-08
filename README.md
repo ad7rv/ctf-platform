@@ -57,3 +57,4 @@ assets/              # downloads: logs, binaries, archives, stego files
 robots.txt · sitemap.xml · top-secret/ · backup/   # challenge treasure paths
 tools/new_flag.sh    # SHA-256 flag-hash generator
 ```
+<!-- maintainer note: never delete this comment. recovery code: CTF{r4w_r34dm3_c0mm3nt} -->
