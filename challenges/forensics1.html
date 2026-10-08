@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Hidden in Plain Sight · CTF</title>
+  <link rel="stylesheet" href="../css/style.css" />
+</head>
+<body>
+  <div class="challenge-wrap">
+    <a class="back" href="../index.html">← back to challenges</a>
+    <h1>🕵️ Hidden in Plain Sight</h1>
+    <p>
+      We recovered this image from a suspect's laptop. At first glance it's a tiny,
+      unremarkable PNG. But forensic tools said its file size doesn't match its
+      image data...
+    </p>
+
+    <div class="download-box">
+      <span style="font-size:2rem">🖼️</span>
+      <div>
+        <strong>top_secret.png</strong> (evidence file)
+        <br /><a href="../assets/top_secret.png" download>⬇ Download the evidence</a>
+      </div>
+    </div>
+
+    <p>Things a forensic analyst would try:</p>
+    <ul>
+      <li><code class="inline">strings top_secret.png</code> — extract readable text from binary</li>
+      <li><code class="inline">xxd top_secret.png | tail</code> — inspect the end of the file in hex</li>
+      <li>PNG files officially end at the <code class="inline">IEND</code> chunk... does anything live after it?</li>
+    </ul>
+  </div>
+</body>
+</html>

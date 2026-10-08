@@ -1,0 +1,4 @@
+User-agent: *
+Disallow: /top-secret/
+
+# Nothing interesting at /top-secret/flag.txt ... probably

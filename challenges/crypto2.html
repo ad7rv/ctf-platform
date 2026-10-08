@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" type="string" content="width=device-width, initial-scale=1.0" />
+  <title>Base(ic) Instinct · CTF</title>
+  <link rel="stylesheet" href="../css/style.css" />
+</head>
+<body>
+  <div class="challenge-wrap">
+    <a class="back" href="../index.html">← back to challenges</a>
+    <h1>🧬 Base(ic) Instinct</h1>
+    <p>
+      Found this string in a leaked log file. It looks like base64 — encoding that
+      turns bytes into boring printable characters. It might be encoded
+      <strong>more than once</strong>. Peel the layers until you find the flag.
+    </p>
+    <blockquote>UTFSR2UySTBjek0yTkY4eGMxOXVNSFJmY3pOamRYSXpmUT09</blockquote>
+    <ul>
+      <li>Linux/Mac: <code class="inline">echo 'UTFSR2...' | base64 -d</code> — you may need to decode again!</li>
+      <li>Or use CyberChef's "From Base64" operation.</li>
+    </ul>
+  </div>
+</body>
+</html>

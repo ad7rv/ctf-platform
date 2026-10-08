@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Caesar's Favorite Salad · CTF</title>
+  <link rel="stylesheet" href="../css/style.css" />
+</head>
+<body>
+  <div class="challenge-wrap">
+    <a class="back" href="../index.html">← back to challenges</a>
+    <h1>🥗 Caesar's Favorite Salad</h1>
+    <p>
+      The Romans encrypted military messages by shifting every letter a fixed number
+      of places down the alphabet. A modern variant shifts letters by exactly
+      <strong>13</strong> positions — conveniently, applying it twice undoes itself.
+    </p>
+    <p>Intercepted ciphertext:</p>
+    <blockquote>PGS{e0g13_1fag_pelcg0}</blockquote>
+    <ul>
+      <li>Linux/Mac: <code class="inline">echo 'PGS{e0g13_1fag_pelcg0}' | tr 'A-Za-z' 'N-ZA-Mn-za-m'</code></li>
+      <li>Or use any online "ROT13 decoder" (rot13.com, CyberChef...)</li>
+    </ul>
+  </div>
+</body>
+</html>

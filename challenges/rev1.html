@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Reverse the XOR · CTF</title>
+  <link rel="stylesheet" href="../css/style.css" />
+</head>
+<body>
+  <div class="challenge-wrap">
+    <a class="back" href="../index.html">← back to challenges</a>
+    <h1>🔓 Reverse the XOR</h1>
+    <p>
+      The program below was found protecting a flag. It doesn't print the flag
+      directly — it stores <em>obfuscated bytes</em> and only decodes them at
+      runtime. Read the code, figure out what it does, and recover the flag.
+    </p>
+    <p>
+      (Yes, you could just run it in your DevTools console. Understanding
+      <em>why</em> it works is the real challenge.)
+    </p>
+
+    <blockquote><pre id="src">// 🔒 flag-protection.js — definitely uncrackable
+const cipher = [1, 22, 4, 57, 48, 113, 52, 113, 48, 49, 113,
+                29, 54, 42, 113, 29, 58, 114, 48, 63];
+const mask = 0x42;
+let out = "";
+for (let i = 0; i < cipher.length; i++) {
+  out += String.fromCharCode(cipher[i] ^ mask);
+}
+console.log(out);</pre></blockquote>
+
+    <ul>
+      <li>XOR is reversible: <code class="inline">cipher ^ mask = original</code></li>
+      <li>Hint #1: <code class="inline">0x42</code> in decimal is 66.</li>
+      <li>Hint #2: paste the whole script into your browser console (F12).</li>
+      <li>Hardcore path: decode the numbers by hand on paper. 🧠</li>
+    </ul>
+  </div>
+</body>
+</html>

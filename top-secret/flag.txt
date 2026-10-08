@@ -1,0 +1,5 @@
+Well well well... you actually read the robots.txt. Respect.
+
+Your flag: CTF{r0b0ts_kn0w_s3cr3ts}
+
+Now go submit it on the main page before anyone else does.

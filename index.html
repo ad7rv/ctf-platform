@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>CTF · Capture The Flag</title>
+  <meta name="description" content="A beginner-friendly Capture The Flag event. Web, crypto, forensics, reversing and misc challenges." />
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='0.9em' font-size='90'>🚩</text></svg>" />
+</head>
+<body>
+  <header>
+    <div class="header-inner">
+      <div class="logo"><span class="prompt">root@ctf</span>:~# <span id="siteTitle">capture_the_flag</span></div>
+      <div id="playerBar"></div>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="hero">
+      <h1>🚩 Capture The <span class="flag">Flag</span></h1>
+      <p class="sub">
+        Hack your way through web, crypto, forensics, reversing and misc challenges.
+        Find flags in the format <code class="inline">CTF{...}</code> and submit them below.
+      </p>
+      <code id="typer"></code>
+      <div class="progress-wrap">
+        <div class="progress"><div id="progressFill"></div></div>
+        <span id="progressText"></span>
+      </div>
+    </section>
+
+    <nav id="filters"></nav>
+    <section id="grid"></section>
+
+    <h2 class="section-title"><span class="prompt">$</span> leaderboard</h2>
+    <table>
+      <thead><tr><th>#</th><th>Hacker</th><th>Score</th><th>Solved</th></tr></thead>
+      <tbody id="leaderboardBody"></tbody>
+    </table>
+
+    <footer>
+      <p>Flags look like <code class="inline">CTF{something_here}</code> · Progress is saved in your browser · GLHF 🖤</p>
+    </footer>
+  </main>
+
+  <script src="js/challenges.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>
