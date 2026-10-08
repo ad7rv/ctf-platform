@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Fifty Shades of Flag · CTF</title>
+  <link rel="stylesheet" href="../css/style.css" />
+</head>
+<body>
+  <div class="challenge-wrap">
+    <a class="back" href="../index.html">← back to challenges</a>
+    <h1>🎨 Fifty Shades of Flag</h1>
+    <p>A suspicious color palette:</p>
+    <div class="download-box">
+      <span style="font-size:2rem">📦</span>
+      <div><strong>palette.css</strong> (CSS color palette)
+      <br /><a href="../assets/palette.css" download>⬇ Download</a></div>
+    </div>    <ul><li><code class='inline'>grep -o '#..' palette.css | tr -d '#' | xxd -r -p</code></li></ul>
+  </div>
+
+</body>
+</html>

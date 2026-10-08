@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Browser Memory · CTF</title>
+  <link rel="stylesheet" href="../css/style.css" />
+</head>
+<body>
+  <div class="challenge-wrap">
+    <a class="back" href="../index.html">← back to challenges</a>
+    <h1>🧠 Browser Memory</h1>
+    <p>Modern apps keep data in your browser even after the tab closes. This one just did.</p>
+    <ul><li>localStorage survives reloads — check what's stored for this origin.</li></ul>
+  </div>
+<script>
+    (function(){
+      var k = ['ctf_','backup_','code'].join('');
+      var v = ['CTF{l0c4l_','st0r4g3_','l00t3d}'].join('');
+      localStorage.setItem(k, v);
+      localStorage.setItem('theme_pref', 'dark'); // decoy
+    })();
+  </script>
+</body>
+</html>
